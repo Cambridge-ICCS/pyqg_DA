@@ -32,7 +32,7 @@ dependencies = [
     "numba",
     "pyfftw",
     "netCDF4",
-    #"cython",
+    "cython<3.0",
 ]
 
 authors = [
