@@ -28,11 +28,14 @@ dependencies = [
     "tqdm",
     "numpy",
     "seaborn",
-    "pyqg",
     "numba",
     "pyfftw",
     "netCDF4",
-    "cython<3.0",
+    "psutil",
+
+    # bad. handle externally.
+    #"pyqg",
+    #"cython<3.0",
 ]
 
 authors = [
