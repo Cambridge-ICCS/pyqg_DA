@@ -3,7 +3,7 @@ requires = ["setuptools >= 61"]
 build-backend = "setuptools.build_meta"
 
 [project]
-#version = "0.2.0"
+version = "0.1.0"
 
 name = "todo"
 description = "TODO"
@@ -32,7 +32,7 @@ dependencies = [
     "numba",
     "pyfftw",
     "netCDF4",
-    "cython",
+    #"cython",
 ]
 
 authors = [
@@ -59,7 +59,7 @@ include-package-data = true
 #[tool.setuptools.packages]
 #find = {}
 [tool.setuptools.packages.find]
-where = ["src"]  # list of folders that contain the packages (["."] by default)
+where = ["."]  # list of folders that contain the packages (["."] by default)
 include = ["gz21_ocean_momentum", "gz21_ocean_momentum.*"]  # package names should match these glob patterns (["*"] by default)
 #exclude = ["gz21_ocean_momentum.tests*", "examples.py"]  # exclude packages matching these glob patterns (empty by default)
 namespaces = false  # to disable scanning PEP 420 namespaces (true by default)
