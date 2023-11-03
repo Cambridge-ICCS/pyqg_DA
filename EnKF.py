@@ -3,7 +3,7 @@ import numpy as np
 import DA_core as DA
 
 DA_kwargs={}
-for R_W in [75]:
+for R_W in [100]:
     for nens,relax in zip([5,5,5],[0.7,0.75,0.8]):
         DA_paras={'nens':nens,
                 'DA_method':'EnKF',
