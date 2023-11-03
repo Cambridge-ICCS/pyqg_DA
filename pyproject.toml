@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools >= 61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+#version = "0.2.0"
+
+name = "todo"
+description = "TODO"
+#readme = "README.md"
+#license = {file = "LICENSE"}
+#requires-python = ">=3.9"
+#classifiers = [
+#    "Topic :: Scientific/Engineering :: Atmospheric Science",
+#    "License :: OSI Approved :: MIT License",
+#    "Operating System :: OS Independent",
+#]
+
+# from DA_PyQG.yml
+dependencies = [
+    "xarray",
+    "torch>=1.13.1",
+    #"dask",
+    "scipy",
+    "matplotlib",
+    "torchvision",
+    "torchsummary",
+    "tqdm",
+    "numpy",
+    "seaborn",
+    "pyqg",
+    "numba",
+    "pyfftw",
+    "netCDF4",
+    "cython",
+]
+
+authors = [
+  { name="Arthur Guillaumin", email="a.guillaumin@qmul.ac.uk" },
+]
+
+maintainers = [
+  { name="Ben Orchard", email="thefirstmuffinman@gmail.com" },
+  { name="Jack Atkinson", email="jack.atkinson1000@gmail.com" },
+]
+
+[project.urls]
+"Homepage" = "https://github.com/m2lines/GZ21_ocean_momentum"
+"Bug Tracker" = "https://github.com/m2lines/GZ21_ocean_momentum/issues"
+
+[project.optional-dependencies]
+TEST = ["pytest"]
+
+[tool.setuptools]
+# By default, include-package-data is true in pyproject.toml, so you do
+# NOT have to specify this line.
+include-package-data = true
+
+#[tool.setuptools.packages]
+#find = {}
+[tool.setuptools.packages.find]
+where = ["src"]  # list of folders that contain the packages (["."] by default)
+include = ["gz21_ocean_momentum", "gz21_ocean_momentum.*"]  # package names should match these glob patterns (["*"] by default)
+#exclude = ["gz21_ocean_momentum.tests*", "examples.py"]  # exclude packages matching these glob patterns (empty by default)
+namespaces = false  # to disable scanning PEP 420 namespaces (true by default)
